@@ -53,8 +53,6 @@ Este manual te guiará a través de los pasos para configurar y utilizar el sist
         ```bash
         cd Mensajeria-LAN
         ```
-2.  **Abre tu Terminal:**
-    * Navega hasta la carpeta del proyecto usando `cd`.
 
 ### Parte 1: Configuración y Ejecución del Servidor
 
@@ -64,7 +62,7 @@ El servidor es el primero que debe estar activo para que los clientes puedan con
 
 Para que los usuarios puedan iniciar sesión, debes registrarlos en el código.
 
-1.  **Abre `server.cpp`** con tu editor de texto.
+1.  **Abre `server.cpp`** con tu editor de codigo.
 2.  **Localiza la función `registrarUsuarios`** (aproximadamente en la línea 23).
 3.  **Añade usuarios y contraseñas** usando el siguiente formato:
     ```cpp
@@ -75,13 +73,10 @@ Para que los usuarios puedan iniciar sesión, debes registrarlos en el código.
         tabla.Registrar("admin", "passwordseguro");
     }
     ```
-4.  **Guarda el archivo `server.cpp`**.
 
 #### 1.2. Compilar el Código del Servidor
 
-Transforma el código C++ en un ejecutable.
-
-1.  **En tu Terminal** (en la carpeta del proyecto), ejecuta:
+**En tu Terminal** (en la carpeta del proyecto), ejecuta:
     ```bash
     g++ hashhead.cpp ListaEnlazada.cpp server.cpp -o server
     ```
@@ -105,7 +100,7 @@ Los clientes necesitan la IP de este equipo para conectarse.
     ```bash
     ./server
     ```
-    * Verás mensajes indicando que el servidor está escuchando en el puerto 25565 y que se ha creado `logs.txt`.
+    * Verás mensajes indicando que el servidor está escuchando en el puerto 25565.
     * **Mantén esta terminal abierta**; el servidor debe permanecer ejecutándose.
 
 #### 1.5. Detener el Servidor
