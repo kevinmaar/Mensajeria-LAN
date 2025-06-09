@@ -52,9 +52,10 @@ Este manual te guiará detalladamente a través de cada paso para poner en march
     * Si estás en GitHub, puedes descargar el código fuente haciendo clic en el botón verde "**Code**" y luego seleccionando "**Download ZIP**". Descomprime la carpeta en una ubicación de tu elección.
     * Alternativamente, si usas `git`, puedes clonar el repositorio:
         ```bash
-        git clone <URL_DE_TU_REPOSITORIO>
+        git clone [https://github.com/kevinmaar/Sistema-de-mensajer-a-LAN-sin-hilos-en-C-.git]
         cd <nombre_de_la_carpeta_del_proyecto>
         ```
+        
 
 2.  **Abre tu Terminal:**
     * En Linux o macOS, busca la aplicación "Terminal".
