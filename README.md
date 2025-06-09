@@ -246,9 +246,6 @@ Para la construcción de este sistema, se seleccionaron cuidadosamente dos estru
     * **Archivos:** `cliente.cpp`, `server.cpp`
     * **Funcionalidades Clave:** `crearSocketServidor`, `aceptarCliente`, `manejarMensajes`.
 
-### Diseño de la Solución
-El diseño integra las estructuras de datos y los componentes de red. Para una comprensión visual de la arquitectura, se pueden consultar los diagramas de clases UML y los diagramas de flujo del servidor que se encuentran en la documentación original del proyecto (Anexos 9.1 y 9.2).
-
 ## Análisis de Complejidad
 El análisis de complejidad es crucial para entender el rendimiento del sistema:
 
