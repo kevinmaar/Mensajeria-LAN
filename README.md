@@ -4,9 +4,9 @@
 Este proyecto desarrolla un sistema de chat local (LAN) multicliente utilizando C++ y la API de Sockets. Permite a múltiples usuarios registrarse, autenticarse y comunicarse en tiempo real, gestionando las conexiones y los mensajes de forma eficiente mediante estructuras de datos como Tablas Hash y Listas Enlazadas.
 
 ## Autores
+* Kevin Marzul Jeronimo Rojano
 * Raúl Nava Soler
 * Juan Elías Antonio Ramírez
-* Kevin Marzuk Jerónimo Rojano
 
 ---
 
@@ -116,14 +116,13 @@ Los clientes son los programas que los usuarios ejecutarán para conectarse y ch
 
 Cada cliente necesita la dirección IP del servidor.
 
-1.  **Abre `cliente.cpp`** con tu editor de texto.
+1.  **Abre `cliente.cpp`** con tu editor de codigo.
 2.  **Dirígete a la línea 25** y busca la línea que contiene `inet_pton`.
 3.  **Coloca la dirección IP del servidor** que obtuviste en el Paso 1.3:
     ```cpp
     // Línea 25 (aproximadamente) en cliente.cpp
     inet_pton(AF_INET, "IP_DEL_SERVIDOR", &servidor.sin_addr); // Ejemplo: inet_pton(AF_INET, "192.168.1.100", &servidor.sin_addr);
     ```
-4.  **Guarda el archivo `cliente.cpp`**.
 
 #### 2.2. Compilar el Código del Cliente
 
@@ -155,7 +154,7 @@ Una vez que el cliente se ha conectado, puedes empezar a interactuar.
     Password:
     ```
 2.  **Ingresa el Usuario** y presiona Enter.
-3.  **Ingresa el Password** (no se mostrará) y presiona Enter.
+3.  **Ingresa el Password** y presiona Enter.
 4.  Recibirás un mensaje de éxito si las credenciales son correctas y el usuario no está ya conectado.
 
 #### 3.2. Envío de Mensajes
