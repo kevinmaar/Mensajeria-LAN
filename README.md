@@ -192,7 +192,7 @@ Para la construcción de este sistema, se seleccionaron cuidadosamente dos estru
 
 * **Lista Simplemente Enlazada para Clientes Conectados:** Utilizada para gestionar dinámicamente a los clientes activos en el servidor. Su flexibilidad permite un crecimiento y decrecimiento del tamaño en tiempo de ejecución.
     * **Archivos:** `ListaEnlazada.hpp`, `ListaEnlazada.cpp`
-    * **Funcionalidades Clave:** `insertarAlFinal` ($O(1)$), `eliminarNodo` ($O(k)$), `obtenerCabeza`, `ObtenerCantidad`.
+    * **Funcionalidades Clave:** `insertarAlFinal` $O(1)$, `eliminarNodo` $O(k)$, `obtenerCabeza`, `ObtenerCantidad`.
 
 * **Sockets y Concurrencia con `select()`:** La comunicación en red se gestiona a través de la API de Sockets. El servidor utiliza un bucle `while(true)` con `select()` para monitorear simultáneamente nuevas conexiones y mensajes de clientes existentes, logrando concurrencia en un solo hilo.
     * **Archivos:** `cliente.cpp`, `server.cpp`
@@ -211,14 +211,13 @@ El análisis de complejidad es crucial para entender el rendimiento del sistema:
 El rendimiento general del servidor en cada ciclo del bucle principal está dominado por el recorrido de la lista de clientes para el broadcast de mensajes, lo que le confiere una complejidad de $O(k)$. Dado que el número de clientes (`MAX_CLIENTES`) está limitado a 10, el rendimiento es excelente para la escala del problema.
 
 ## Conclusiones y Trabajo Futuro
-El proyecto ha logrado desarrollar exitosamente un sistema de mensajería funcional aplicando las estructuras de datos vistas en el curso. La Tabla Hash demostró ser eficiente para la autenticación, y la Lista Enlazada proveyó la flexibilidad necesaria para la gestión de clientes. La implementación de `select()` facilitó un manejo concurrente de clientes de forma simple y efectiva en un solo hilo.
+El proyecto ha logrado desarrollar exitosamente un sistema de mensajería funcional sin el uso de multiples hilos. La Tabla Hash demostró ser eficiente para la autenticación, y la Lista Enlazada proveyó la flexibilidad necesaria para la gestión de clientes. La implementación de `select()` facilitó un manejo concurrente de clientes de forma simple y efectiva en un solo hilo.
 
 Para el trabajo futuro, se proponen las siguientes mejoras:
 1.  **Seguridad Mejorada:** Implementar el hashing de contraseñas con un "salt" antes de almacenarlas, en lugar de guardarlas en texto plano.
 2.  **Persistencia de Datos:** Conectar el servidor a una base de datos para que los usuarios registrados no se pierdan al reiniciar el servidor.
 3.  **Funcionalidades Adicionales:**
     * Implementar mensajes privados entre usuarios.
-    * Crear canales o salas de chat temáticas.
     * Añadir un historial de mensajes que se envíe a los nuevos clientes al conectarse.
 4.  **Escalabilidad:** Para soportar un número significativamente mayor de usuarios, se podría migrar de `select()` a `epoll` (en Linux) y considerar una arquitectura multihilo o basada en eventos para distribuir la carga de trabajo.
 
