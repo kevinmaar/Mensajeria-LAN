@@ -48,8 +48,10 @@ Este manual te guiará a través de los pasos para configurar y utilizar el sist
 1.  **Descarga o Clona el Proyecto:**
     * Descarga el ZIP desde GitHub o clona el repositorio:
         ```bash
-        git clone [https://github.com/kevinmaar/Sistema-de-mensajer-a-LAN-sin-hilos-en-C-.git](https://github.com/kevinmaar/Sistema-de-mensajer-a-LAN-sin-hilos-en-C-.git)
-        cd <nombre_de_la_carpeta_del_proyecto>
+        git clone https://github.com/kevinmaar/Mensajeria-LAN.git
+        ```
+        ```bash
+        cd Mensajeria-LAN
         ```
 2.  **Abre tu Terminal:**
     * Navega hasta la carpeta del proyecto usando `cd`.
